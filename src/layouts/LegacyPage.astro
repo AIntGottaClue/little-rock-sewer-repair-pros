@@ -9,6 +9,7 @@ if (!original) throw new Error(`Unknown page ${slug}`);
 // values are resolved from the one config file during Astro's static build.
 const html = original
   .replaceAll('Little Rock Sewer Repair Pros', siteConfig.brand)
+  .replaceAll('Little Rock <i>Sewer Repair</i> Pros', 'Little Rock <i>Sewer Line</i> Pros')
   .replaceAll('https://littlerocksewerrepair.prosapp.site', siteConfig.origin)
   .replace(/\{\{(GA4_ID|TRACKER_ID|BRAND|PHONE_DISPLAY|PHONE_HREF)\}\}/g, (_token, key) => ({
   GA4_ID: siteConfig.ga4MeasurementId,
