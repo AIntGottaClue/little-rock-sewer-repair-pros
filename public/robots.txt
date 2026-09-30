@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://littlerocksewerrepair.prosapp.site/sitemap.xml
+Sitemap: https://littlerocksewerline.prosapp.site/sitemap.xml
