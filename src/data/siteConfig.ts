@@ -1,7 +1,7 @@
 /** Edit site-specific integrations and contact details here for every HSP build. */
 export const siteConfig = {
-  brand: 'Little Rock Sewer Repair Pros',
-  origin: 'https://littlerocksewerrepair.prosapp.site',
+  brand: 'Little Rock Sewer Line Pros',
+  origin: 'https://littlerocksewerline.prosapp.site',
   phoneDisplay: '(877) 761-0283',
   phoneHref: '+18777610283',
   // Landing pages (/lp/) call lpPhone when set; when blank, their CTA buttons jump straight to the on-page form instead.
