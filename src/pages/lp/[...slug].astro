@@ -13,7 +13,9 @@ export function getStaticPaths() {
 }
 const { variantSlug } = Astro.props;
 const variant = variants.find(item => item.slug === variantSlug);
-const home = pages['/'];
+const home = pages['/']
+  .replaceAll('Little Rock Sewer Repair Pros', siteConfig.brand)
+  .replaceAll('https://littlerocksewerrepair.prosapp.site', siteConfig.origin);
 const extract = (pattern: RegExp) => {
   const match = home.match(pattern);
   if (!match) throw new Error('Little Rock landing page cannot find shared site markup');
@@ -32,7 +34,7 @@ const hasLpPhone = Boolean(siteConfig.lpPhoneHref && siteConfig.lpPhoneDisplay);
 const callCta = hasLpPhone
   ? { href: `tel:${siteConfig.lpPhoneHref}`, label: siteConfig.lpPhoneDisplay, aria: `Call ${siteConfig.brand} at ${siteConfig.lpPhoneDisplay}` }
   : { href: '#main', label: 'Request a call', aria: 'Go to the request form' };
-const title = variant ? `${variant.name} | Little Rock Sewer Repair Pros` : 'Little Rock landing pages | Little Rock Sewer Repair Pros';
+const title = variant ? `${variant.name} | Little Rock Sewer Line Pros` : 'Little Rock landing pages | Little Rock Sewer Line Pros';
 ---
 <!doctype html>
 <html lang="en">
@@ -40,7 +42,7 @@ const title = variant ? `${variant.name} | Little Rock Sewer Repair Pros` : 'Lit
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{title}</title>
-  <meta name="description" content={variant ? variant.subheadline : 'Little Rock Sewer Repair Pros landing page variants.'} />
+  <meta name="description" content={variant ? variant.subheadline : 'Little Rock Sewer Line Pros landing page variants.'} />
   <meta name="robots" content="noindex, nofollow" />
   <link rel="canonical" href={`${siteConfig.origin}${path}`} />
   <link rel="stylesheet" href="/assets/site.css?nav=20260927-5" />
@@ -92,7 +94,7 @@ const title = variant ? `${variant.name} | Little Rock Sewer Repair Pros` : 'Lit
   ) : (
     <section class="section"><div class="wrap lp-index">
       <h1>Little Rock landing pages</h1>
-      <p>Citywide landing page variants for Little Rock Sewer Repair Pros.</p>
+      <p>Citywide landing page variants for Little Rock Sewer Line Pros.</p>
       <div class="grid">
         {variants.map(item => <article class="card"><h2>{item.name}</h2><p>{item.headline}</p><a href={`/lp/${item.slug}/`}>View landing page</a></article>)}
       </div>
