@@ -15,6 +15,7 @@ const { variantSlug } = Astro.props;
 const variant = variants.find(item => item.slug === variantSlug);
 const home = pages['/']
   .replaceAll('Little Rock Sewer Repair Pros', siteConfig.brand)
+  .replaceAll('Little Rock <i>Sewer Repair</i> Pros', 'Little Rock <i>Sewer Line</i> Pros')
   .replaceAll('https://littlerocksewerrepair.prosapp.site', siteConfig.origin);
 const extract = (pattern: RegExp) => {
   const match = home.match(pattern);
