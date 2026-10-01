@@ -7,6 +7,6 @@ export const siteConfig = {
   // Landing pages (/lp/) call lpPhone when set; when blank, their CTA buttons jump straight to the on-page form instead.
   lpPhoneDisplay: '(877) 761-0283',
   lpPhoneHref: '+18777610283',
-  ga4MeasurementId: 'G-XXXXXXXXXX',
+  ga4MeasurementId: 'G-T9MLLKYH28',
   airchattyTrackingId: 'tk_61d238e145314251999b74fdd5c953cf',
 } as const;
